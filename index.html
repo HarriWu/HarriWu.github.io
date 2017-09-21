@@ -14,10 +14,11 @@
 
 <div id="webpage">
 <nav class="w3-bar" style="color: black">
-  <button class="w3-button w3-bar-item">Contacts</button>
+  <button id="open" class="w3-button w3-bar-item">Contacts</button>
   <a href="index.html" class="w3-button w3-bar-item">Home</a>
   <a href="web2.html" class="w3-button w3-bar-item">Projects</a>
   <a href="/downloads/Resume_Harrison.pdf" class="w3-button w3-bar-item">Resume</a>
+  
 </nav>
 
 <div id="hidden_info" class="info">
@@ -26,7 +27,8 @@
     <h4>Email Address:</h4>
     <p>harrisonwu@hotmail.ca</p>
     <h4>Phone Number:</h4>
-    <p>1 (403) 700-3751</p>
+    <p>1 (403) 700-3751</p>       
+    <p><button id="close">x</button></p>
   </div>
 
 </div>
@@ -53,8 +55,11 @@
 
 $(document).ready(function(){
     $("#hidden_info").hide();
-    $("button").click(function(){
+    $("#open").click(function(){
       $("#hidden_info").show("slow");
+    });
+    $("#close").click(function(){
+      $("#hidden_info").hide("slow");
     });
 
   });
